@@ -1,20 +1,18 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/email.schema.json",
   "title": "Email",
   "type": "object",
   "properties": {
-    "email": {
-      "type": "object",
-      "properties": {
-        "subject": {
-          "type": "string"
-        },
-        "body": {
-          "type": "string"
-        }
-      },
-      "required": ["subject", "body"]
+    "subject": {
+      "type": "string",
+      "description": "The subject line of the email"
+    },
+    "body": {
+      "type": "string",
+      "description": "The plain text body of the email"
     }
   },
-  "required": ["email"]
+  "required": ["subject", "body"],
+  "additionalProperties": false
 }
