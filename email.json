@@ -1,6 +1,20 @@
 {
-  "email": {
-    "subject": "",
-    "body": ""
-  }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Email",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        }
+      },
+      "required": ["subject", "body"]
+    }
+  },
+  "required": ["email"]
 }
